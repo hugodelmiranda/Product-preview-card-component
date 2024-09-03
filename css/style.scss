@@ -1,0 +1,149 @@
+@import "reset.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,50,0..1;1,9..144,100..900,50,0..1&display=swap");
+//Primary
+
+$darkCyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+
+//Neutral
+
+$veryDarkBlue: hsl(212, 21%, 14%);
+$darkGrayishBlue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+header img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+article {
+  padding: 30px;
+
+  .tag {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+  }
+
+  h1 {
+    font-family: Fraunces;
+    font-size: 32px;
+    font-weight: 700;
+    color: $veryDarkBlue;
+    margin-top: 10px;
+  }
+
+  p {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+
+    margin: 20px 0;
+  }
+
+  .price {
+    font-family: Fraunces;
+    font-size: 32px;
+    font-weight: 700;
+    color: $darkCyan;
+    vertical-align: middle;
+
+    span {
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 500;
+      color: hsl(228, 12%, 48%);
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+
+  button {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+    border: 0;
+    background-color: $darkCyan;
+
+    img {
+      margin-left: -10px;
+      margin-right: 10px;
+      vertical-align: text-top;
+    }
+  }
+}
+
+.container {
+  padding: 30px;
+}
+
+.row {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 3px 3px 16px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 376px) {
+  body {
+    width: 375px;
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  .row {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  header img {
+    height: 100%;
+    border-radius: 10px 0px 0 10px;
+    content: url("../images/image-product-desktop.jpg") !important;
+  }
+
+  article {
+    width: 80%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+}
